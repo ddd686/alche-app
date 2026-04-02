@@ -1,0 +1,72 @@
+[
+  {
+    "id": "TASK-001",
+    "req": "DESIGN-SYSTEM",
+    "title": "Design system reskin — update AlcheColors, AlcheTypography, AlcheRadii, all components",
+    "priority": "CRITICAL",
+    "status": "queued",
+    "assigned_to": null,
+    "blocked_by": [],
+    "description": "Full design system audit and reskin. Update AlcheColors (light + dark mode palettes), AlcheTypography (Cormorant Garamond display, Outfit body — verify weights, sizes, line heights), AlcheRadii (sm/md/lg values), AlcheSpacing (xs through xl). Update all reusable components: AlcheCard, AlcheButton, AlcheTag, AlcheEmptyStateView, DataSourceIndicator. Ensure every token supports adaptive light/dark rendering. Verify Color.alcheBackground and Color.alcheSurface are used consistently — no static Color.cream or Color.linen anywhere. This unblocks TASK-002."
+  },
+  {
+    "id": "TASK-002",
+    "req": "DESIGN-SYSTEM",
+    "title": "Update all 77 feature views to new design system tokens",
+    "priority": "HIGH",
+    "status": "queued",
+    "assigned_to": null,
+    "blocked_by": ["TASK-001"],
+    "description": "After design system reskin, sweep all 77 feature views across Features/ to ensure: (1) no hardcoded colors remain, (2) no system fonts (.body, .caption, .subheadline) remain, (3) all backgrounds use Color.alcheBackground or Color.alcheSurface, (4) all cards use AlcheCard, (5) all buttons use AlcheButton, (6) all spacing uses AlcheSpacing tokens. Cover: Auth, Onboarding, Home, Booking, Shop, InStore, Discover, Profile, GlowScan, Biomarkers, Protocols, Progress, DigitalTwin, Nutrition, Restaurants, DoctorSessions."
+  },
+  {
+    "id": "TASK-003",
+    "req": "INFRA",
+    "title": "Create Supabase project — EU Frankfurt region",
+    "priority": "HIGH",
+    "status": "blocked",
+    "assigned_to": null,
+    "blocked_by": [],
+    "description": "Provision Supabase project in EU Frankfurt (eu-central-1). Set up: PostgreSQL database, Auth (email + Apple Sign In), Row Level Security policies, Edge Functions runtime. Create initial schema for: users, memberships, bookings, sessions, smoothie_orders, events, rsvps, products, orders, protocols, daily_checkins, glow_scans, biomarkers, macro_logs, restaurants, doctor_sessions. All health data tables require GDPR consent flag. This unblocks ALL Phase 4 backend wiring. BLOCKED: needs Supabase account credentials from Product."
+  },
+  {
+    "id": "TASK-004",
+    "req": "REQ-018",
+    "title": "REQ-018 Favorites & Wishlist — spec + build",
+    "priority": "MEDIUM",
+    "status": "queued",
+    "assigned_to": null,
+    "blocked_by": [],
+    "description": "Write PRD for REQ-018 (Favorites & Wishlist). Scope: users can favorite smoothies, products, protocols, events, restaurants, practitioners. Wishlist for shop products. Favorites appear in Profile > Favorites tab. Heart icon on all favoriteable cards. Persist in UserDefaults for mock phase, Supabase favorites table for live. Create specs/REQ-018-favorites-wishlist/prd.md and tasks.md. Then build: FavoritesServiceProtocol, MockFavoritesService, FavoritesViewModel, FavoritesListView, heart button component. Follow Model/Service/ViewModel patterns from CLAUDE.md."
+  },
+  {
+    "id": "TASK-005",
+    "req": "PHASE-5",
+    "title": "Phase 5 testing — XCTest for all service layers",
+    "priority": "MEDIUM",
+    "status": "queued",
+    "assigned_to": null,
+    "blocked_by": [],
+    "description": "Write XCTest suites for every service protocol. Cover: BookingServiceProtocol, SmoothieServiceProtocol, EventServiceProtocol, ShopServiceProtocol, ProtocolServiceProtocol, ProgressServiceProtocol, GlowScanServiceProtocol, BiomarkerServiceProtocol, DigitalTwinServiceProtocol, RestaurantServiceProtocol, NutritionTrackingServiceProtocol, DoctorSessionServiceProtocol, ReferralServiceProtocol, NotificationServiceProtocol. Each test file: test load/fetch, test create/update/delete, test error states, test edge cases (empty data, maximum values). Also write XCUITest for critical flows: onboarding, booking an LED session, ordering a smoothie, logging a meal, booking a doctor session."
+  },
+  {
+    "id": "TASK-006",
+    "req": "ACCESSIBILITY",
+    "title": "Accessibility pass — VoiceOver, Dynamic Type, contrast",
+    "priority": "LOW",
+    "status": "queued",
+    "assigned_to": null,
+    "blocked_by": ["TASK-001", "TASK-002"],
+    "description": "Full accessibility audit across all 23 features. (1) VoiceOver: add accessibilityLabel and accessibilityHint to all interactive elements, ensure logical reading order, test with VoiceOver on device. (2) Dynamic Type: verify all text scales with preferredContentSizeCategory, test with largest accessibility size. (3) Contrast: verify all text/background combinations meet WCAG AA (4.5:1 for body, 3:1 for large text). (4) Tap targets: all interactive elements minimum 44x44pt. (5) Reduce Motion: respect accessibilityReduceMotion for all animations. (6) Button labels: no icon-only buttons without accessibilityLabel."
+  },
+  {
+    "id": "TASK-007",
+    "req": "LOCALIZATION",
+    "title": "Localization — EN + DE string catalogs",
+    "priority": "LOW",
+    "status": "queued",
+    "assigned_to": null,
+    "blocked_by": [],
+    "description": "Extract all user-facing strings into String Catalogs (.xcstrings). EN as source language, DE as first translation. Cover: all button labels, all section headers, all error messages, all empty state messages, all onboarding copy, all health disclaimers, all notification copy. Use Xcode 15+ String Catalog format. Verify all strings use LocalizedStringKey in SwiftUI views. Special attention: health/wellness language must be accurate in German (wellness practitioner = Wellness-Berater, not Arzt). Nutrition disclaimers must be legally accurate in German."
+  }
+]

@@ -1,0 +1,73 @@
+name: Alche
+options:
+  bundleIdPrefix: com.alche
+  deploymentTarget:
+    iOS: "17.0"
+  xcodeVersion: "16.0"
+  groupSortPosition: top
+  generateEmptyDirectories: true
+
+settings:
+  base:
+    SWIFT_VERSION: "6.0"
+    MARKETING_VERSION: "1.0.0"
+    CURRENT_PROJECT_VERSION: 1
+
+targets:
+  Alche:
+    type: application
+    platform: iOS
+    sources:
+      - path: Alche
+        excludes:
+          - "**/.gitkeep"
+    info:
+      path: Alche/Info.plist
+      properties:
+        CFBundleDisplayName: "alche"
+        NSCameraUsageDescription: "Alché uses your camera for Glow Scan skin analysis"
+        NSPhotoLibraryUsageDescription: "Alché accesses your photos for Glow Scan"
+        UIRequiresFullScreen: true
+        UISupportedInterfaceOrientations:
+          - UIInterfaceOrientationPortrait
+        UIApplicationSceneManifest:
+          UIApplicationSupportsMultipleScenes: false
+        UILaunchScreen: {}
+        UIAppFonts:
+          - newsreader_200_italic.ttf
+          - newsreader_300_italic.ttf
+          - newsreader_400_italic.ttf
+          - newsreader_500_italic.ttf
+          - newsreader_600_italic.ttf
+          - newsreader_700_italic.ttf
+          - notosans_400.ttf
+          - notosans_500.ttf
+          - notosans_700.ttf
+          - spacemono_400.ttf
+          - spacemono_700.ttf
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.alche.app
+        SWIFT_EMIT_LOC_STRINGS: true
+        ENABLE_USER_SCRIPT_SANDBOXING: true
+        CODE_SIGN_STYLE: Automatic
+        DEVELOPMENT_TEAM: B5N883S37V
+      configs:
+        Debug:
+          SWIFT_ACTIVE_COMPILATION_CONDITIONS: "DEBUG"
+        Release:
+          SWIFT_COMPILATION_MODE: wholemodule
+
+  AlcheTests:
+    type: bundle.unit-test
+    platform: iOS
+    sources:
+      - path: AlcheTests
+        excludes:
+          - "**/.gitkeep"
+    dependencies:
+      - target: Alche
+    settings:
+      base:
+        GENERATE_INFOPLIST_FILE: true
+        PRODUCT_BUNDLE_IDENTIFIER: com.alche.app.tests
