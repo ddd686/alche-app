@@ -90,11 +90,11 @@ struct HormonalBalanceView: View {
 
                 HStack(alignment: .firstTextBaseline, spacing: AlcheSpacing.sm) {
                     Text("Late")
-                        .font(.custom("Newsreader-Light", size: 30, relativeTo: .title))
+                        .font(.custom("Newsreader16pt-LightItalic", size: 30, relativeTo: .title))
                         .foregroundStyle(Color.alcheEditorialBlack)
 
                     Text("Follicular")
-                        .font(.custom("Newsreader-Italic", size: 30, relativeTo: .title))
+                        .font(.custom("Newsreader16pt-Italic", size: 30, relativeTo: .title))
                         .foregroundStyle(Color.alcheEditorialBlack)
                 }
             }
@@ -409,7 +409,7 @@ struct HormonalBalanceView: View {
             switch valueStyle {
             case .displayItalic:
                 Text(value)
-                    .font(.custom("Newsreader-Italic", size: 18, relativeTo: .body))
+                    .font(.custom("Newsreader16pt-Italic", size: 18, relativeTo: .body))
                     .foregroundStyle(Color.alcheEditorialBlack)
             case .mono:
                 Text(value)
@@ -427,7 +427,7 @@ struct HormonalBalanceView: View {
                         .padding(.top, AlcheSpacing.xs)
                 case .insight:
                     Text(subtitle)
-                        .font(.custom("Newsreader-Italic", size: 10, relativeTo: .caption2))
+                        .font(.custom("Newsreader16pt-Italic", size: 10, relativeTo: .caption2))
                         .foregroundStyle(Color.alcheEditorialMuted)
                         .lineSpacing(1)
                         .padding(.top, AlcheSpacing.xs)
@@ -491,7 +491,7 @@ struct HormonalBalanceView: View {
                     .frame(width: 2)
 
                 Text("\u{201C}\(dailyInsight)\u{201D}")
-                    .font(.custom("Newsreader-Italic", size: 18, relativeTo: .body))
+                    .font(.custom("Newsreader16pt-Italic", size: 18, relativeTo: .body))
                     .foregroundStyle(Color.alcheEditorialBlack)
                     .lineSpacing(3)
             }
@@ -530,7 +530,7 @@ struct HormonalBalanceView: View {
                         .frame(width: 6, height: 6)
 
                     Text("Connected")
-                        .font(.custom("Newsreader-Italic", size: 13, relativeTo: .footnote))
+                        .font(.custom("Newsreader16pt-Italic", size: 13, relativeTo: .footnote))
                         .foregroundStyle(Color.alcheEditorialBlack)
                 }
             }

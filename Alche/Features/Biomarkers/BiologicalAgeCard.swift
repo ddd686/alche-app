@@ -145,17 +145,17 @@ struct BiologicalAgeCard: View {
         return ZStack(alignment: .topTrailing) {
             HStack(alignment: .top, spacing: -4) {
                 Text("\(integerPart)")
-                    .font(.custom("Newsreader-LightItalic", size: 108, relativeTo: .largeTitle))
+                    .font(.custom("Newsreader16pt-LightItalic", size: 108, relativeTo: .largeTitle))
                     .foregroundStyle(Color.alcheEditorialBlack)
 
                 Text(decimalString)
-                    .font(.custom("Newsreader-Light", size: 64, relativeTo: .largeTitle))
+                    .font(.custom("Newsreader16pt-LightItalic", size: 64, relativeTo: .largeTitle))
                     .foregroundStyle(Color.alcheEditorialBlack)
                     .offset(y: 4)
             }
 
             Text("*")
-                .font(.custom("Newsreader-Regular", size: 36, relativeTo: .title))
+                .font(.custom("Newsreader16pt-Italic", size: 36, relativeTo: .title))
                 .foregroundStyle(Color.alchePrimary)
                 .offset(x: 16, y: 8)
         }
@@ -283,7 +283,7 @@ struct BiologicalAgeCard: View {
                     .foregroundStyle(Color.alcheEditorialMuted)
 
                 Text(sublabel)
-                    .font(.custom("Newsreader-Italic", size: 10, relativeTo: .caption2))
+                    .font(.custom("Newsreader16pt-Italic", size: 10, relativeTo: .caption2))
                     .foregroundStyle(Color.alcheEditorialMuted)
             }
         }
@@ -325,7 +325,7 @@ struct BiologicalAgeCard: View {
                     .frame(width: 3, height: 40)
 
                 Text(telomereInsight)
-                    .font(.custom("Newsreader-Italic", size: 18, relativeTo: .body))
+                    .font(.custom("Newsreader16pt-Italic", size: 18, relativeTo: .body))
                     .foregroundStyle(Color.alcheEditorialBlack)
                     .lineSpacing(2)
             }

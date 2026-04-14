@@ -204,7 +204,7 @@ struct BioSyncView: View {
                     .foregroundStyle(Color.alcheEditorialBlack)
 
                 Text("Bio-Data")
-                    .font(.custom("Newsreader-Regular", size: 48, relativeTo: .largeTitle))
+                    .font(.custom("Newsreader16pt-Italic", size: 48, relativeTo: .largeTitle))
                     .foregroundStyle(Color.alcheEditorialBlack)
                     .tracking(-0.5)
             }
@@ -316,7 +316,7 @@ struct SyncProgressItem: View {
                 Spacer()
 
                 Text(status)
-                    .font(.custom("Newsreader-Italic", size: 13, relativeTo: .footnote))
+                    .font(.custom("Newsreader16pt-Italic", size: 13, relativeTo: .footnote))
                     .foregroundStyle(
                         statusStyle == .complete
                             ? Color.alchePrimary

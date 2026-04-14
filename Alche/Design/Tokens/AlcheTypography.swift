@@ -3,13 +3,14 @@ import SwiftUI
 // MARK: - Font Names
 
 private enum AlcheFontName {
-    // Display — Newsreader Italic family (serifs, editorial feel)
-    static let displayExtraLight = "Newsreader-ExtraLightItalic"
-    static let displayLight = "Newsreader-LightItalic"
-    static let displayRegular = "Newsreader-Italic"
-    static let displayMedium = "Newsreader-MediumItalic"
-    static let displaySemiBold = "Newsreader-SemiBoldItalic"
-    static let displayBold = "Newsreader-BoldItalic"
+    // Display — Newsreader 16pt Italic family (serifs, editorial feel)
+    // PostScript names patched to match actual font files
+    static let displayExtraLight = "Newsreader16pt-ExtraLightItalic"
+    static let displayLight = "Newsreader16pt-LightItalic"
+    static let displayRegular = "Newsreader16pt-Italic"
+    static let displayMedium = "Newsreader16pt-MediumItalic"
+    static let displaySemiBold = "Newsreader16pt-SemiBoldItalic"
+    static let displayBold = "Newsreader16pt-BoldItalic"
 
     // Heading + Body — Noto Sans family (clean, readable)
     static let heading = "NotoSans-Bold"

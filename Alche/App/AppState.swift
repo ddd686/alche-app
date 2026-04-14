@@ -3,6 +3,7 @@ import SwiftUI
 @Observable
 @MainActor
 final class AppState {
+    var hasSeenWelcome = false
     var isAuthenticated = false
     var hasCompletedOnboarding = false
     var selectedTab: Tab = .home

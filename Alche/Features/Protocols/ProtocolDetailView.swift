@@ -127,7 +127,7 @@ struct ProtocolDetailView: View {
                         .foregroundStyle(beautyMuted)
 
                     Text(statusText)
-                        .font(.custom("Newsreader-Italic", size: 18, relativeTo: .body))
+                        .font(.custom("Newsreader16pt-Italic", size: 18, relativeTo: .body))
                         .foregroundStyle(beautyText)
                 }
 
@@ -195,7 +195,7 @@ struct ProtocolDetailView: View {
                     .foregroundStyle(beautyMuted)
 
                 Text("Ovulatory")
-                    .font(.custom("Newsreader-Italic", size: 14, relativeTo: .footnote))
+                    .font(.custom("Newsreader16pt-Italic", size: 14, relativeTo: .footnote))
                     .foregroundStyle(beautyText)
             }
 
@@ -290,7 +290,7 @@ private struct BeautyChecklistRow: View {
             VStack(alignment: .leading, spacing: AlcheSpacing.xs) {
                 HStack(alignment: .firstTextBaseline) {
                     Text(step.action)
-                        .font(.custom("Newsreader-Italic", size: 20, relativeTo: .title3))
+                        .font(.custom("Newsreader16pt-Italic", size: 20, relativeTo: .title3))
                         .foregroundStyle(beautyText)
                         .strikethrough(isCompleted, color: beautyText.opacity(0.3))
 

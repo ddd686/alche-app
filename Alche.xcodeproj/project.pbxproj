@@ -134,6 +134,7 @@
 		B7083BBF0D236DEC39AE0756 /* SupplementRecommendationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 409D33B32384EE417EA767B9 /* SupplementRecommendationView.swift */; };
 		B81D01F979235DF058D0F3AC /* QuickScanView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4907DF30F92065421402A98 /* QuickScanView.swift */; };
 		B83A7486D521AAB5B9DD24B2 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DCA352A1F3C57033DA65A0A /* AppState.swift */; };
+		B8C4E5F60712349ADEF05678 /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7B3D4E5F6012389CDEF4567 /* WelcomeView.swift */; };
 		B969B4A92F92F48ECB02BAF7 /* RoadmapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A72D736DFAA2A6440A2ABC98 /* RoadmapViewModel.swift */; };
 		BA12663A2A75163AEC2E0E4A /* AlcheButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB1A9A079A10C90B390B991 /* AlcheButton.swift */; };
 		BCC1ABCB32B6DEE91A184756 /* DigitalTwinState.swift in Sources */ = {isa = PBXBuildFile; fileRef = A90AB54B072EF312C3420F79 /* DigitalTwinState.swift */; };
@@ -318,6 +319,7 @@
 		A1C35260F40D89DB6267FDD0 /* BookingDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingDetailView.swift; sourceTree = "<group>"; };
 		A42CCD9E94113FA103133B5D /* DiscoverView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverView.swift; sourceTree = "<group>"; };
 		A72D736DFAA2A6440A2ABC98 /* RoadmapViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoadmapViewModel.swift; sourceTree = "<group>"; };
+		A7B3D4E5F6012389CDEF4567 /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
 		A82F550F901DC444255FE532 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		A90AB54B072EF312C3420F79 /* DigitalTwinState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DigitalTwinState.swift; sourceTree = "<group>"; };
 		A98FE165BA77B4756ECADD00 /* ShopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopView.swift; sourceTree = "<group>"; };
@@ -806,6 +808,7 @@
 				588CB4D5198CBC5E40508AD1 /* QuickScanViewModel.swift */,
 				409D33B32384EE417EA767B9 /* SupplementRecommendationView.swift */,
 				100B67863242DAFD66F5B496 /* SupplementRecommendationViewModel.swift */,
+				A7B3D4E5F6012389CDEF4567 /* WelcomeView.swift */,
 			);
 			path = Onboarding;
 			sourceTree = "<group>";
@@ -1141,6 +1144,7 @@
 				53C292589DD584308BCC7189 /* SupplementRecommendationViewModel.swift in Sources */,
 				3ACFFC2B6FA9177CDF6D5311 /* TimelineNodeView.swift in Sources */,
 				079DE4B87373EA3FD012C632 /* User.swift in Sources */,
+				B8C4E5F60712349ADEF05678 /* WelcomeView.swift in Sources */,
 				1420A01F75CB415E2B001F29 /* WellnessGoal.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

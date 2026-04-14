@@ -25,6 +25,7 @@ targets:
       path: Alche/Info.plist
       properties:
         CFBundleDisplayName: "alche"
+        ITSAppUsesNonExemptEncryption: false
         NSCameraUsageDescription: "Alché uses your camera for Glow Scan skin analysis"
         NSPhotoLibraryUsageDescription: "Alché accesses your photos for Glow Scan"
         UIRequiresFullScreen: true
